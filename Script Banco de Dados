@@ -1,0 +1,18 @@
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS banco_login;
+USE banco_login;
+
+-- Criação da tabela 'usuario'
+CREATE TABLE `usuario` (
+  `id_usuario` BIGINT NOT NULL AUTO_INCREMENT,
+  `login` VARCHAR(255) DEFAULT NULL,
+  `nome` VARCHAR(255) DEFAULT NULL,
+  `senha` VARCHAR(255) DEFAULT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Inserção dos dados na tabela 'usuario'
+INSERT INTO `usuario` (`id_usuario`, `login`, `nome`, `senha`) VALUES
+('1', 'rafael.selvagio', 'Rafael', '123456'),
+('2', 'teste', 'Teste', 'teste'),
+('3', 'aluno', 'Aluno', 'aluno');
